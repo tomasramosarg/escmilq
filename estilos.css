@@ -4,19 +4,82 @@
   color: white;
   padding: 100px 0;
 }
-/* Estilos del calendario */
-#calendar {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el filtro de eventos */
-#eventFilter {
-  margin-bottom: 20px;
+.filter-container label {
+    font-weight: bold;
+    color: #555;
+}
+
+.filter-container select {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background: #f9f9f9;
+}
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+table thead tr {
+    background: #333;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background: #f1f1f1;
+}
+
+table a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+td:first-child {
+    font-weight: bold;
 }
 footer {
   padding: 15px;
