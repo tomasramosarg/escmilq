@@ -7,7 +7,7 @@ $password = 'admin1234!';
 
 
    
-    $pdo = new PDO("mysql:host=$host;dbname=$dbnombre;charset=utf8", $usuario, $password);
+    $pdo = new PDO("mariadb:host=$host;dbname=$dbnombre;charset=utf8", $usuario, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
    
