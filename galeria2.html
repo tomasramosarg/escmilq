@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Mi Sitio Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="cronograma.html">Cronograma</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="cde.html">Centro de Estudiantes</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="interaccion.html">Interacción</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <aside class="description">
+        <h2>Carroza</h2>
+        <p>"La escuela se hizo una vez mas presente en los desfiles de carroza.".</p>
+    </aside>
+    <main class="gallery">
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza2.jpg')">
+            <img src="fotos pg/carroza2.jpg" alt="Imagen 1">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza3.jpg')">
+            <img src="fotos pg/carroza3.jpg" alt="Imagen 2">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/trabajandocarroza.jpg')">
+            <img src="fotos pg/trabajandocarroza.jpg" alt="Imagen 3">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/pisoCarroza.jpg')">
+            <img src="fotos pg/pisoCarroza.jpg" alt="Imagen 3">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza6.jpg')">
+            <img src="fotos pg/carroza6.jpg" alt="Imagen 3">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza7.jpg')">
+            <img src="fotos pg/carroza7.jpg" alt="Imagen 4">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza9.jpg')">
+            <img src="fotos pg/carroza9.jpg" alt="Imagen 5">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza8.jpg')">
+            <img src="fotos pg/carroza8.jpg" alt="Imagen 6">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza10.jpg')">
+            <img src="fotos pg/carroza10.jpg" alt="Imagen 7">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza11.jpg')">
+            <img src="fotos pg/carroza11.jpg" alt="Imagen 7">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza13.jpg')">
+            <img src="fotos pg/carroza13.jpg" alt="Imagen 7">
+        </div>
+        <div class="gallery-item" onclick="openModal('fotos pg/carroza12.jpg')">
+            <img src="fotos pg/carroza12.jpg" alt="Imagen 7">
+        </div>
+    </main>
+</div>
+
+<!-- Modal para mostrar imagen ampliada -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+
+<script>
+    function openModal(imageSrc) {
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        modal.style.display = 'block';
+        modalImage.src = imageSrc;
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    }
+</script>
+ <!-- Footer -->
+ <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
