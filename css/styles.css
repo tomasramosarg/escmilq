@@ -1,0 +1,36 @@
+header{
+    background-color: aqua;
+    
+}
+
+p {
+    text-align: center;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+table {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+th {
+    background-color: #0073e6;
+    color: white;
+}

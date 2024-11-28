@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso de faltas</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img src="multimedia/logo.png" alt="imglogo" height="50" width="45">
+      <a class="navbar-brand" href="index.html"> Escuela de Minas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cronograma.html">Cronograma</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="eventos.html">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cde.html">Centro de Estudiantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="galeria.html">Galería</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="interaccion.html">Interacción</a>
+              </li>
+              </a>
+              </li>
+    
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    <h1>Faltas de Profesores</h1>
+    
+    <!-- Contenedor de notificaciones -->
+    <div id="areaParaNotificaciones"></div>
+    
+    <!-- Formulario para notificar faltas -->
+    <form id="faltaForm" method="POST">
+        <div class="button-container">
+            <button type="button" onclick="notificar('Matemáticas')">Notificar Falta - Matemáticas</button>
+            <button type="button" onclick="notificar('Historia')">Notificar Falta - Historia</button>
+            <button type="button" onclick="notificar('Biología')">Notificar Falta - Biología</button>
+            <button type="button" onclick="notificar('Química')">Notificar Falta - Química</button>
+            <button type="button" onclick="notificar('Física')">Notificar Falta - Física</button>
+        </div>
+        
+        <!-- Campo oculto para enviar la materia seleccionada -->
+        <input type="hidden" name="materia" id="materiaInput">
+        <input type="hidden" name="id_profesor" id="id_profesorInput" value="1"> <!-- Puedes cambiar este valor dinámicamente si lo deseas -->
+        <button type="submit" id="submitButton" onclick="registrarFalta(event)">Enviar</button>
+    </form>
+
+    <script>
+        function notificar(materia) {
+            // Mostrar notificación en el área de notificaciones
+            const areaNotificaciones = document.getElementById('areaParaNotificaciones');
+            const mensaje = document.createElement('div');
+            mensaje.className = 'mensaje';
+            mensaje.textContent = `El profesor de ${materia} ha notificado una falta el día ${new Date().toLocaleDateString()}.`;
+            areaNotificaciones.appendChild(mensaje);
+
+            // Rellenar el campo oculto con la materia seleccionada
+            document.getElementById('materiaInput').value = materia;
+
+            // Desactivar el botón de esa materia para evitar múltiples envíos
+            document.querySelectorAll("button").forEach(button => {
+                button.disabled = button.textContent.includes(materia);
+            });
+        }
+
+        function registrarFalta(event) {
+    // Prevenir el comportamiento predeterminado del formulario
+    event.preventDefault();
+
+    const formData = new FormData(document.getElementById('faltaForm'));
+
+    fetch('guardar_falta.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor');
+        }
+        return response.json(); // Convertir la respuesta a JSON
+    })
+    .then(data => {
+        console.log(data); // Aquí mostramos 'data' (no 'response')
+        alert(data.message); // Muestra el mensaje del servidor
+    })
+    .catch(error => {
+    console.error('Error en la solicitud:', error.message || error);
+    alert('Error al registrar la falta: ' + (error.message || error));
+});
+
+}
+
+
+        
+    </script>
+</body>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2024 Escuela de Minas. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</html>
+
