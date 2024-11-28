@@ -4,7 +4,7 @@ header('Content-Type: application/json');  // Configura la respuesta como JSON
 $servername = "mysql-escmilq.alwaysdata.net";
 $username = "escmilq";
 $password = "admin1234!";
-$dbname = "escmilq_bd"; 
+$dbname = "escmilq_db"; 
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);

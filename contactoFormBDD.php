@@ -1,7 +1,7 @@
 <?php
 
 $host = 'mysql-escmilq.alwaysdata.net';
-$dbnombre = 'escmilq_bd';
+$dbnombre = 'escmilq_db';
 $usuario = 'escmilq';
 $password = 'admin1234!';
 
