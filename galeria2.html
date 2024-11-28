@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .gallery img {
+      width: 100%; /* Asegura que las imágenes ocupen el ancho del contenedor */
+      height: 200px; /* Establece una altura uniforme */
+      object-fit: cover; /* Recorta las imágenes para que se ajusten sin deformarse */
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .modal img {
+      max-width: 100%;
+    }
+
+    .container-title {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Mi Sitio Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="cronograma.html">Cronograma</a></li>
+          <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="cde.html">Centro de Estudiantes</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="galeria.html">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="interaccion.html">Interacción</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <div class="container my-4">
+
+    <!-- Descripción de Carroza -->
+    <div class="row container-title">
+      <div class="col-md-3">
+        <h2>CARROZA</h2>
+        <p>"La escuela se hizo una vez más presente en los desfiles de carroza."</p>
+      </div>
+      <div class="col-md-9 gallery">
+        <div class="row">
+          <div class="col-4 mb-3">
+            <img src="multimedia/carrozafrente.jpg" alt="Carroza frente" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/CarrozaMuro.jpg" alt="Carroza muro" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/CarrozaPromo.jpg" alt="Carroza promo" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/CarrozaEmbajadores.jpg" alt="Carroza embajadores" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/PechandoCarroza.jpg" alt="Pechando carroza" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/Carrozahombredegalleta.jpg" alt="Carroza hombre de galleta" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/ChicasDeEstructura.jpg" alt="Chicas de estructura" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/CarrozaEstructura.jpg" alt="Carroza estructura" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/pisoCarroza.jpg" alt="Piso de carroza" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/trabajandocarroza.jpg" alt="Trabajando en carroza" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/ChicosDeEstructura.jpg" alt="Chicos de estructura" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descripción de Día del Estudiante -->
+    <div class="row container-title">
+      <div class="col-md-3">
+        <h2>DÍA DEL ESTUDIANTE</h2>
+        <p>"Por el día del estudiante todos los alumnos de diferentes cursos se juntaron para poder celebrar su día, pasando un día agradable en el Río Toro Ara."</p>
+      </div>
+      <div class="col-md-9 gallery">
+        <div class="row">
+          <div class="col-4 mb-3">
+            <img src="multimedia/promoRio.jpg" alt="promoRio" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/docentes.rio.jpg" alt="docentes.rio" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/RioJugandoPrePromo.jpg" alt="RioJugandoPrePromo" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/RioJugando.jpg" alt="RioJugando" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/jugandoenelRIO.jpg" alt="jugandoenelRIO" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/EstudiantesYendoseRio.jpg" alt="EstudiantesYendoseRio.jpg" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/alumonosdeBasicoRio.jpg" alt="alumonosdeBasicoRio" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+          <div class="col-4 mb-3">
+            <img src="multimedia/mojandoseRio.jpg" alt="mojandoseRio" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descripción de Pintada Estudiantil -->
+    <div class="row container-title">
+      <div class="col-md-3">
+        <h2>PINTADA ESTUDIANTIL</h2>
+        <p>"Como cada año, los estudiantes de nuestra institución decoraron con colores las paredes de la escuela en la tradicional pintada estudiantil."</p>
+      </div>
+      <div class="col-md-9 gallery">
+        <div class="row">
+            <div class="col-md-9 gallery">
+                <div class="row">
+                  <div class="col-4 mb-3">
+                    <img src="multimedia/estudiantesPintando.jpg" alt="estudiantesPintando" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+                  </div>
+                  <div class="col-4 mb-3">
+                    <img src="multimedia/estudiantesPintando2.jpg" alt="estudiantesPintando2" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+                  </div>
+                  <div class="col-4 mb-3">
+                    <img src="multimedia/alumnasdebasicoPintada.jpg" alt="" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+                  </div>
+                  <div class="col-4 mb-3">
+                    <img src="multimedia/pintando.jpg" alt="pintando" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+                  </div>
+                  <div class="col-4 mb-3">
+                    <img src="multimedia/pintandoAmarrillo.jpg" alt="pintandoAmarrillo" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+                  </div>
+                  <div class="col-4 mb-3">
+                    <img src="multimedia/PintandoPisoPintada.jpg" alt="PintandoPisoPintada" class="img-fluid" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="setImage(this.src)">
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- Enlace -->
+<div class="text-end mt-4 mb-3">
+    <a href="galeria.html" class="btn btn-primary">Volver a la galeria principal</a>
+  </div>
+  </div>
+
+
+  <!-- Modal de imagen -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <img id="modalImage" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function setImage(src) {
+      document.getElementById('modalImage').src = src;
+    }
+  </script>
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>
