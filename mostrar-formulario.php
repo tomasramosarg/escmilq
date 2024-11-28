@@ -38,7 +38,7 @@
         $servername = "mysql-escmilq.alwaysdata.net";   // Cambia esto si es necesario
         $username = "escmilq";          // Nombre de usuario de MySQL
         $password = "admin1234!";              // Contraseña de MySQL
-        $dbname = "escmilq_bd";      // Nombre de la base de datos
+        $dbname = "escmilq_db";      // Nombre de la base de datos
 
         try {
             // Conexión a la base de datos usando PDO
