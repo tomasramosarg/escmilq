@@ -1,0 +1,53 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado principal */
+.title {
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Subtítulo */
+.subhead {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Imagen */
+.img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Párrafos */
+.com-paragraph {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Sección del contenido */
+.container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Texto debajo de la imagen */
+.image-caption {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+}
