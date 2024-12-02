@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fecha = date("Y-m-d");
 
     // Usar consulta preparada para insertar los datos
-    $stmt = $conn->prepare("INSERT INTO faltas (id, nom_materia, fecha) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO faltas (id_profesor, nom_materia, fecha) VALUES (?, ?, ?)");
 
     if (!$stmt) {
         // Mostrar el error de la consulta
